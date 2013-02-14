@@ -1,0 +1,68 @@
+!!! 5
+%html{lang: "en"}
+	%head
+		%meta{charset: "utf-8"}
+		%title Weather
+		%link{href: "styles.css", rel: "stylesheet"}
+		%link{href: "icon-font.css", rel: "stylesheet"}
+		%meta{name: "viewport", content: "width=device-width initial-scale=1"}
+	%body
+		%div.container.group
+			
+			%section.widget.group	
+				%div.dateday.group
+					%div.day Today
+					%div.date Feb 4th
+				%div.weather
+					%div.icon_rain.icon-rainy-2
+					%div.temperature 72&deg&nbsp;&frasl;&nbsp;55&deg
+					%div.city CHICAGO
+				%aside.hourly
+					%ol
+						%li
+							%span.col-time 11am
+							%span.col-icon.icon-rainy-2
+							%span.col-description Light Rain
+							%span.col-temp 72&deg&nbsp;
+						%li
+							%span.col-time Noon
+							%span.col-icon.icon-cloudy-2
+							%span.col-description Cloudy Skies
+							%span.col-temp 74&deg&nbsp;
+						%li
+							%span.col-time 1pm
+							%span.col-icon.icon-cloudy
+							%span.col-description Partly Sunny
+							%span.col-temp 76&deg&nbsp;
+						%li
+							%span.col-time 2pm
+							%span.col-icon.icon-cloudy
+							%span.col-description Partly Sunny
+							%span.col-temp 76&deg&nbsp;
+						%li
+							%span.col-time 3pm
+							%span.col-icon.icon-cloudy
+							%span.col-description Partly Sunny
+							%span.col-temp 75&deg&nbsp;
+
+			%section.widget.group	
+				%div.dateday.group
+					%div.day TUESDAY
+					%div.date Feb 5th
+				%div.weather
+					%div.icon_rain.icon-lightning
+					%div.temperature 71&deg&nbsp;&frasl;&nbsp;51&deg
+					%div.city CHICAGO
+
+			%section.widget.group	
+				%div.dateday.group
+					%div.day WEDNESDAY
+					%div.date Feb 6th
+				%div.weather
+					%div.icon_rain.icon-snowy
+					%div.temperature 24&deg&nbsp;&frasl;&nbsp;21&deg
+					%div.city CHICAGO
+
+
+
+

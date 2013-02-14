@@ -1,0 +1,207 @@
+/* VARIABLES */
+$default-list-style: none
+$font-base: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+$white: #fff
+$default-border-color: #ccc
+
+/* MIXINS */
+@mixin bg-size($back-size)
+	-webkit-background-size: $back-size
+	-moz-background-size: $back-size
+	-o-background-size: $back-size
+	background-size: $back-size
+
+
+
+/* BASE ELEMENTS */
+
+*
+	box-sizing: border-box
+
+html
+	background: url("imgs/rain_window.jpg") no-repeat center center fixed
+	+bg-size($back-size: cover)
+	opacity: 0.9
+	height: 100%
+	font-family: $font-base
+
+body
+	margin: 0
+
+.container
+	margin: 0 auto
+
+
+header
+	padding: 10px 0
+
+img
+	border: 0
+	max-width: 100%
+
+ol
+	list-style: $default-list-style
+	padding: 0
+	margin: 0
+
+li
+	list-style: $default-list-style
+
+/* COMPONENTS */
+
+.group
+	*zoom: 1
+	&:before, &:after
+		display: table
+		content: ""
+	&:after
+		clear: both
+
+.widget
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(70,70,70,0.4)), to(rgba(0,0,0,0.4))), -webkit-gradient(radial, center -400, 50, center -480, 682, from(rgba(204,204,204,0.4)), to(rgba(70,70,70,0.2))), -webkit-gradient(radial, left center, 150, left center, 622, from(rgba(70,70,70,0.1)), to(rgba(0,0,0,0))), -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(125,125,125,0.3)), color-stop(0.01, rgba(0,0,0,0.4)), color-stop(0.03, rgba(0,0,0,0.4)) ), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, rgba(0,0,0,0.5)), color-stop(1, rgba(0,0,0,0.9)) )
+	margin: 10%
+	color: $white
+	opacity: 0.8
+	text-align: center
+
+.hourly
+	display: none
+
+.singleday_forcast
+	width: 100%
+
+.dateday
+	border-bottom: 1px solid $default-border-color
+	padding: 10%
+
+.day
+	font-size: 40px
+
+.date
+	font-size: 18px
+
+.icon_rain
+	margin-top: 10%
+	max-width: 100%
+	font-size: 106px
+
+.temperature
+	font-size: 44px
+	padding: 5%
+
+.city
+	font-size: 20px
+	padding: 7%
+
+
+
+
+@media all and (min-width:704px) and (max-width:950px)
+	html
+		background: url("imgs/sunset.jpg")
+
+	.widget 
+		float: left
+		width: 35%
+		margin: 0 0 10% 10%
+
+	.widget:nth-of-type(1)
+		width: 80%
+		margin: 10%
+
+	.weather 
+		.widget:nth-of-type(1) &
+			float: left
+			width: 40%
+
+
+	.city
+		.widget:nth-of-type(1) &
+			padding: 4%
+			margin-bottom: 10%
+ 
+	.dateday 
+		width: 100%
+		text-align: center
+		margin: 0
+		padding: 4% 0
+
+	.day 
+		display: inline-block
+		margin: 0 auto
+		padding: 2%
+		font-size: 22px
+
+		.widget:nth-of-type(1) & 
+			display: inline
+			font-size: 32px
+
+	.date
+		display: block
+		margin: 0 auto
+		padding: 2%
+		font-size: 22px
+
+		.widget:nth-of-type(1) & 
+			display: inline
+			font-size: 32px
+
+	.hourly
+		display: inline-block
+		border-left: 1px solid $default-border-color
+		width: 60%
+
+		ol
+			list-style-type: $default-list-style
+			font-size: 16px
+
+		li 
+			position: relative
+			list-style-type: $default-list-style
+			font-size: 16px   
+			text-align: left
+			padding: 2% 2% 2% 5%
+			border-bottom: 1px solid $default-border-color
+
+		li:last-child
+			border-bottom: none
+		
+		span
+			font-size: 22px
+			text-align: center
+
+		img
+			vertical-align: middle
+
+	.col-time
+		margin-right: 5%
+
+	span.col-icon
+		margin-right: 3%
+		font-size: 35px
+
+	.col-description
+		margin-right: 5%
+
+	.col-temp
+		margin-right: 2%
+
+
+
+@media all and (min-width: 951px)
+
+	html 
+		background-image: url("imgs/sunset.jpg")
+
+	.widget
+		float: left
+		width: 30%
+		margin: 2.5% 0 2.5% 2.5%
+
+	.day 
+		font-size: 25px
+
+	.date 
+		font-size: 25px
+
+
